@@ -1,0 +1,90 @@
+.table{
+	margin: 5px auto;
+}
+
+.td{
+	text-align: center;
+}
+
+.vertical{
+	border-left: 2px solid white;
+	border-right: 2px solid white;
+	text-align: center;
+	width: 100px;
+	height : 80px;
+	margin: auto;
+	border: 1px s 
+}
+
+.horizontal{
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
+	text-align: center;
+	width: 100px;
+	height : 80px;
+	margin: auto;
+	border: 1px s 
+}
+
+.outer{
+	text-align: center;
+}
+
+.center{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.restartbutton {
+	width: 80px;
+	height : 50px;
+	border: none;
+	color: white;
+	margin-left:900px;
+	display: inline-block;
+	background-color: #f44336;	
+}
+
+.block {
+	margin-left: 200px;
+	width: 1000px;
+	height: 450px;
+	border: 1px;
+	border-radius: 5px;
+	background-color: #4CAF50;
+}
+
+.results {
+	text-align: center;
+	color: white;
+	font-size:30px;
+	font-family:'Courier New';
+	margin-top: 2%;
+	margin-left: 200px;
+	width: 1000px;
+	height: 150px;
+	border: 1px;
+	border-radius: 5px;
+	background-color: #4CAF50;
+}
+
+.winner {
+	margin-left: 200px;
+	width: 500px;
+	height : 40px;
+	border: none;
+	color: white;
+	text-align: center;
+	background-color: #af4caa;	
+}
+
+.input{
+	width: 100px;
+	height : 80px;
+	border: none;
+	border-radius: 2px;
+	text-align: center;
+	font-size:30px;
+	background-color: #4CAF50;
+}
+
