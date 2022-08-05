@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import './Play.css';
   
 const Play = () => {
@@ -70,7 +70,7 @@ const Play = () => {
     }
     
 return (
-    
+
 <div>
     <div class="results"> 
         <h2>TIC TAC TOE</h2>
