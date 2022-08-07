@@ -6,6 +6,7 @@ const Play = () => {
     const [player, setPlayer] = useState('X');
     const [data, setData] = useState(Array(9).fill(''));
     const [finalWinner, setFinalWinner] = useState();
+    const [gameOver, setGameOver] = useState(false);
 
     const winner = (squares) => {
             let winningPatterns = {
@@ -25,12 +26,13 @@ const Play = () => {
         for (let combination in winningPatterns)
         {
             winningPatterns[combination].forEach((pattern) => {
-                console.log(pattern);
+            
                 if(squares[pattern[0]] === '' || squares[pattern[1]]  === '' || squares[pattern[2]]  === '' )
                 {//do nothing 
                 }
                 else if(squares[pattern[0]] === squares[pattern[1]] && squares[pattern[1]] === squares[pattern[2]])
                 {
+                    setGameOver(true);
                     setFinalWinner(squares[pattern[0]]);
                 }   
             });
@@ -61,12 +63,19 @@ const Play = () => {
     }
 
     const Box = ({value}) => {
-        return <td> <input class="input" onClick={() => handleClick(value)}></input> {data[value]} </td>
+        return <td class="input"> <input class="input" onClick={() => gameOver? handleGameOver : handleClick(value)}></input> {data[value]} </td>
     }
 
     const handleRestart= () => {
         setFinalWinner(null);
         setData(Array(9).fill('')); 
+        setGameOver(false);
+    }
+
+    const handleGameOver = () => {
+        setGameOver(false);
+        setData(Array(9).fill(''));
+        alert('Game Over, Click Restart To Play Again!!!') 
     }
     
 return (
@@ -76,12 +85,12 @@ return (
         <h2>TIC TAC TOE</h2>
         <h2> Player : {player} </h2>  
     </div>
-
+    
     {finalWinner &&(
     <div class="winner">
         <h2>The Winner Is : {finalWinner}</h2>
     </div>)}
-    
+
     <div class="block">
         <br></br>
         <button class="restartbutton" onClick={() => handleRestart()}> Restart </button>
